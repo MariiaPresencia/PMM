@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HolaMundo</string>
+    <string name="app2_name">DarSaludo</string>
+
+    <string name="saludo">Prueba de Saludo!</string>
+    <string name="escribe">Introduce TU NOMBRE</string>
+    <string name="pulsar">Pulsa Aqui</string>
+    <string name="volver">VOLVER Actividad Anterior</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
