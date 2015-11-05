@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LayoutColor</string>
+    <string name="color1">Rojo</string>
+    <string name="color2">Blanco</string>
+    <string name="color3">Azul</string>
+    <string name="color">PONER COLOR</string>
+    <string name="can">BORRAR</string>
+</resources>
