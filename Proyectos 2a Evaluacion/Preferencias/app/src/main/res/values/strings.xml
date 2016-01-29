@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Preferencia</string>
+    <string name="preferencias">Preferencias</string>
+    <string name="consultar">Consultar</string>
+</resources>
