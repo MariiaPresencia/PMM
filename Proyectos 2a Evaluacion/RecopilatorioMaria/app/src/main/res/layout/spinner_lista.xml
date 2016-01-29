@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView android:id="@+id/LblImagen"
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:layout_gravity="left"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView android:id="@+id/LblNombre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="normal|bold"
+        android:textSize="45px"
+        android:textColor="#036513" />
+
+
+    <TextView android:id="@+id/LblPrecio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LblNombre"
+        android:textStyle="normal"
+        android:textSize="35px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#036513" />
+
+</RelativeLayout>
