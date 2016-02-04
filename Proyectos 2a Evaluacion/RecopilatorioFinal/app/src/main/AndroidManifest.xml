@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mariiasmiith.contentprovider">
+    package="com.example.mariiasmiith.recopilatoriofinal">
 
     <application
         android:allowBackup="true"
@@ -9,17 +9,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <provider
-            android:authorities="com.example.mariiasmiith.contentprovider.UsuariosProvider"
-            android:name="UsuariosProvider"
-            android:exported="true"/>
+        <activity android:name=".Resultados" />
+        <activity android:name=".Registro" />
+        <activity android:name=".Usuarios" />
+        <activity android:name=".Pedir" />
+        <activity android:name=".PantallaFinal" />
+        <activity android:name=".DibujoApp"></activity>
+        <activity android:name=".AcercaDe"></activity>
     </application>
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
 
 </manifest>
