@@ -7,7 +7,6 @@ import android.widget.*;
 import android.content.*;
 import android.view.*;
 
-import com.example.mariiasmiith.recopilatoriofinal.PantallasFinales.Resultados;
 import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.AcercaDe;
 import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.DibujoApp;
 

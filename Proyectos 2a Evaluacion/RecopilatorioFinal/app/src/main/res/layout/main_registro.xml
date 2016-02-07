@@ -9,11 +9,13 @@ android:layout_height="wrap_content">
     android:text="@string/registro"
     android:textAlignment="center"
     android:id="@+id/text1"
-    android:textStyle="bold|italic"
     android:textColor="#036513"
-    android:textSize="25dp"
+    android:textSize="30dp"
     android:gravity="center_vertical|center"
-    android:layout_weight="0.10" />
+    android:layout_weight="0.10"
+    android:typeface="normal"
+    android:visibility="visible"
+    android:textStyle="bold" />
 
 <LinearLayout
     android:orientation="vertical"
@@ -116,7 +118,7 @@ android:layout_height="wrap_content">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/entrar"
+        android:text="@string/registro"
         android:id="@+id/button4"
         android:gravity="center_vertical|center"
         android:layout_gravity="center_horizontal"

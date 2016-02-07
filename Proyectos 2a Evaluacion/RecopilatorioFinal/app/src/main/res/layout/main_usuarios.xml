@@ -10,7 +10,7 @@
         android:id="@+id/texto2"
         android:textStyle="bold|italic"
         android:textColor="#036513"
-        android:textSize="25dp"
+        android:textSize="40dp"
         android:gravity="center_vertical|center"
         android:layout_weight="0.10" />
 

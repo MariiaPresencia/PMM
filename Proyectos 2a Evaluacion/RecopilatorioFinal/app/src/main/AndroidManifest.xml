@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PantallasFinales.Resultados" />
+        <activity android:name=".Resultados" />
         <activity android:name=".Registro" />
         <activity android:name=".Clientes" />
         <activity android:name=".PantallasSecundarias.Pedir" />

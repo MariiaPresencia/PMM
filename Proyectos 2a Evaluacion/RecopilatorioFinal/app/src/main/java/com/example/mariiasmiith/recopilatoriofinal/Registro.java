@@ -48,6 +48,7 @@ public class Registro extends AppCompatActivity {
 
         ContentValues registro = new ContentValues();
 
+
         registro.put("usuario", usuario);
         registro.put("direccion", direccion);
         registro.put("email", email);

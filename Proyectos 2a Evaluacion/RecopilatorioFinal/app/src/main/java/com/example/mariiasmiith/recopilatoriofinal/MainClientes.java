@@ -23,6 +23,8 @@ public class MainClientes extends AppCompatActivity {
         id = recogido.getInt("ID");
         nombre = recogido.getString("CLIENTE");
 
+
+
         titulo = "Hola "+nombre+".Bienvenido";
         t1 = (TextView)findViewById(R.id.tit);
         b1 = (Button)findViewById(R.id.buttonMod);
@@ -34,7 +36,10 @@ public class MainClientes extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle envio = new Bundle();
+                envio.putInt("IDCLIENTE", id);
                 Intent i = new Intent(MainClientes.this, Pedir.class);
+                i.putExtras(envio);
                 startActivity(i);
             }
         });
@@ -44,6 +49,12 @@ public class MainClientes extends AppCompatActivity {
             public void onClick(View v) {
                 Intent in = new Intent(MainClientes.this,ModificacionUsuario.class);
                 startActivity(in);
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 

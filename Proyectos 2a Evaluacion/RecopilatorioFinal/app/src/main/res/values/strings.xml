@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">RecopilatorioFinal</string>
     <string name="titulo">Farmacia</string>
-    <string name="primerBoton">Usuarios</string>
-    <string name="segundoBoton">Registarse</string>
-    <string name="tercerBoton">Pedir</string>
-    <string name="cuartoBoton">Resultados</string>
+    <string name="primerBoton">Usuario</string>
+    <string name="segundoBoton">Registrar</string>
+    <string name="tercerBoton">Mi carrito</string>
+    <string name="cuartoBoton">Pedidos</string>
     <string name="farma">Farmacia Presencia Herrero</string>
     <string name="autor">Maria Presencia Herrero</string>
-    <string name="copy">Copyrigth @2016 Maria Presencia</string>
+    <string name="copy">Copyrigth @2016</string>
     <string name="usuario">Usuario:</string>
     <string name="contraseña">Contraseña:</string>
     <string name="eliminar">Eliminar</string>
     <string name="registro">Registrate</string>
     <string name="email">Correo:</string>
     <string name="direccion">Direccion:</string>
-    <string name="modificar">Modificar</string>
+    <string name="modificar">Mi cuenta</string>
     <string name="entrar">Entrar</string>
 </resources>

@@ -14,23 +14,21 @@ public class BaseDeDatos extends SQLiteOpenHelper{
             "  'email' TEXT NOT NULL UNIQUE,"+
             "  'contrasenya' TEXT NOT NULL"+
             "  );";
-
     String createPedidos = "CREATE TABLE IF NOT EXISTS 'pedidos' (" +
-            "  id INTEGER NOT NULL PRIMARY KEY," +
-            "  usuarioIdentificador INTEGER NOT NULL," +
-            "  farmaco TEXT NOT NULL," +
-            "  dosis TEXT NOT NULL," +
-            "  forma TEXT NOT NULL," +
-            "  unidades INTEGER NOT NULL," +
-            "  precio INTEGER NOT NULL," +
-            "  imagen INTEGER NOT NULL," +
-            "   FOREIGN KEY(usuarioIdentificador) REFERENCES clientes(id) ON DELETE CASCADE" +
+            "  'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+            "  'idCliente' INTEGER NOT NULL," +
+            "  'farmaco' TEXT NOT NULL," +
+            "  'dosis' TEXT NOT NULL," +
+            "  'forma' TEXT NOT NULL," +
+            "  'unidad' REAL NOT NULL," +
+            "  'precio' REAL NOT NULL," +
+            "  'imagen' INTEGER NOT NULL," +
+            "   FOREIGN KEY(idCliente) REFERENCES clientes(id) ON DELETE CASCADE" +
             "  );";
 
     public BaseDeDatos(Context contexto, String nombreBD, CursorFactory basededatos, int version){
         super(contexto, nombreBD, basededatos, version);
     }
-
 
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(tablaUsuarios);
@@ -41,7 +39,7 @@ public class BaseDeDatos extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //Eliminamos la version anterior de la tabla
         db.execSQL("DROP TABLE IF EXISTS 'clientes'");
-        db.execSQL("DROP TABLE IF EXISTS pedidos");
+        db.execSQL("DROP TABLE IF EXISTS 'pedidos'");
         //Creamos la nueva versi�n de la tabla
         db.execSQL(tablaUsuarios);
         db.execSQL(createPedidos);

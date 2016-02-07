@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.mariiasmiith.recopilatoriofinal.R;
 
 public class PantallaFinal extends AppCompatActivity {
@@ -28,6 +27,8 @@ public class PantallaFinal extends AppCompatActivity {
         otroSaludo5.setText(miBundleRecoger.getString("SELECCION"));
         otroSaludo.setText(miBundleRecoger.getString("TEXTO"));
         imagen.setBackgroundDrawable(getResources().getDrawable(miBundleRecoger.getInt("IMAGEN")));
+
+
 
     }
 }

@@ -1,7 +1,9 @@
 package com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -18,11 +20,11 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-
+import android.widget.Toast;
+import com.example.mariiasmiith.recopilatoriofinal.BaseDeDatos;
 import com.example.mariiasmiith.recopilatoriofinal.Clases.Farmacos;
 import com.example.mariiasmiith.recopilatoriofinal.PantallasFinales.PantallaFinal;
 import com.example.mariiasmiith.recopilatoriofinal.R;
-
 import java.text.DecimalFormat;
 
 public class Pedir extends AppCompatActivity{
@@ -37,7 +39,7 @@ public class Pedir extends AppCompatActivity{
     double total, precioF;
     String farmaco1;
     Integer img;
-
+    int idCliente;
 
     private Farmacos[] farmaco = new Farmacos[]{
             new Farmacos("Aspirina", 3.4, R.drawable.aspirina),
@@ -49,6 +51,9 @@ public class Pedir extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_recopilatorio);
+
+        Bundle recoge = getIntent().getExtras();
+        idCliente = recoge.getInt("IDCLIENTE");
 
         //creamos las variables
         textView1 = (TextView) findViewById(R.id.textView1);
@@ -110,6 +115,7 @@ public class Pedir extends AppCompatActivity{
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
+
                 DecimalFormat formateador = new DecimalFormat("##.##");
                 String precioTotal;
                 double total = 0;
@@ -143,6 +149,8 @@ public class Pedir extends AppCompatActivity{
                 total = total + precioF;
                 total = total * cantidad;
 
+                registrarPedidos(idCliente,farmaco1,sele,box,cantidad,total,img);
+
                 Intent miIntent = new Intent(Pedir.this, PantallaFinal.class);
                 Bundle miBundle = new Bundle();
                 String unidad = "Unidades :"+cantidad;
@@ -150,6 +158,7 @@ public class Pedir extends AppCompatActivity{
                 String tp2 = "Cantidad: "+sele;
                 String precioBase = "PRECIO BASE: "+precioF;
                 String precioFinal = "COSTE FINAL : "+total;
+
                 miBundle.putString("FARMACO",farmaco1);
                 miBundle.putString("UNIDAD", unidad);
                 miBundle.putString("SELECCION",tp1);
@@ -159,6 +168,7 @@ public class Pedir extends AppCompatActivity{
                 miBundle.putInt("IMAGEN",img);
                 miIntent.putExtras(miBundle);
                 startActivity(miIntent);
+
 
             }
 
@@ -185,5 +195,28 @@ public class Pedir extends AppCompatActivity{
                 return super.onOptionsItemSelected(item);
         }
 
+    }
+
+    public void registrarPedidos(int idCliente, String farmaco, String dosis, String forma, double unidad , double precio , int imagen){
+
+        BaseDeDatos ad = new BaseDeDatos(this, "DBUsuarios", null, 1);
+        SQLiteDatabase db = ad.getWritableDatabase();
+
+        ContentValues registro1 = new ContentValues();
+
+        registro1.put("idCliente",idCliente);
+        registro1.put("farmaco", farmaco);
+        registro1.put("dosis", dosis);
+        registro1.put("forma", forma);
+        registro1.put("unidad", unidad);
+        registro1.put("precio", precio);
+        registro1.put("imagen", imagen);
+
+
+        db.insert("pedidos", null, registro1);
+        //db.execSQL("INSERT INTO 'pedidos' (idCliente , farmaco , dosis, forma , unidades , precio, imagen) VALUES " + registro);
+        db.close();
+
+        Toast.makeText(this, "Guardado correctamente", Toast.LENGTH_SHORT).show();
     }
 }
