@@ -1,4 +1,4 @@
-package com.example.mariiasmiith.recopilatoriofinal;
+package com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +18,10 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.mariiasmiith.recopilatoriofinal.Clases.Farmacos;
+import com.example.mariiasmiith.recopilatoriofinal.PantallasFinales.PantallaFinal;
+import com.example.mariiasmiith.recopilatoriofinal.R;
 
 import java.text.DecimalFormat;
 

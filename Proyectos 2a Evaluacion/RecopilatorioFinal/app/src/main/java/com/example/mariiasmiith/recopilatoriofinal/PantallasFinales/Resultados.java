@@ -1,4 +1,4 @@
-package com.example.mariiasmiith.recopilatoriofinal;
+package com.example.mariiasmiith.recopilatoriofinal.PantallasFinales;
 
 import android.support.v7.app.AppCompatActivity;
 

@@ -15,13 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Resultados" />
+        <activity android:name=".PantallasFinales.Resultados" />
         <activity android:name=".Registro" />
-        <activity android:name=".Usuarios" />
-        <activity android:name=".Pedir" />
-        <activity android:name=".PantallaFinal" />
-        <activity android:name=".DibujoApp"></activity>
-        <activity android:name=".AcercaDe"></activity>
+        <activity android:name=".Clientes" />
+        <activity android:name=".PantallasSecundarias.Pedir" />
+        <activity android:name=".PantallasFinales.PantallaFinal" />
+        <activity android:name=".PantallasSecundarias.DibujoApp"/>
+        <activity android:name=".PantallasSecundarias.AcercaDe"/>
+        <activity android:name=".MainClientes"/>
     </application>
 
 </manifest>

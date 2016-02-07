@@ -1,9 +1,11 @@
-package com.example.mariiasmiith.recopilatoriofinal;
+package com.example.mariiasmiith.recopilatoriofinal.PantallasFinales;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.mariiasmiith.recopilatoriofinal.R;
 
 public class PantallaFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {

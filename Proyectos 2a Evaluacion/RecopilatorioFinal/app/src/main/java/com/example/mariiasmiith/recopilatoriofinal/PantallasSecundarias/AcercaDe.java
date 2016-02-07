@@ -1,8 +1,10 @@
-package com.example.mariiasmiith.recopilatoriofinal;
+package com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias;
 
 import android.app.*;
 import android.support.v7.app.ActionBarActivity;
 import android.os.*;
+
+import com.example.mariiasmiith.recopilatoriofinal.R;
 
 public class AcercaDe extends ActionBarActivity{
     @Override

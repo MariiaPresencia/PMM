@@ -10,61 +10,52 @@
     tools:context="com.example.mariiasmiith.recopilatoriofinal.MainActivity"
     android:orientation="vertical"
     android:weightSum="1">
-
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/titulo"
-        android:textAlignment="center"
-        android:id="@+id/textView1"
-        android:textStyle="bold|italic"
+        android:id="@+id/tit"
         android:textColor="#036513"
-        android:textSize="50dp"
-        android:gravity="center_vertical|center"
-        android:layout_weight="0.10" />
-
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.12"
-        android:layout_gravity="center_vertical"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="40dp">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonMod"
+        android:text="@string/modificar"
+        android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:text="@string/primerBoton"
+            android:id="@+id/button2"
+            android:text="@string/tercerBoton"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.15">
+        android:layout_marginTop="40dp">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button1"
-            android:text="@string/segundoBoton"
-            android:layout_gravity="center_horizontal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.16">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3"
+            android:id="@+id/buttonListar"
             android:text="@string/cuartoBoton"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
-
-
 </LinearLayout>
