@@ -7,20 +7,20 @@ import android.database.sqlite.SQLiteDatabase.*;
 
 
 public class BaseDeDatos extends SQLiteOpenHelper{
-    String tablaUsuarios = "CREATE TABLE 'clientes' (" +
-            //"  id INTEGER NOT NULL PRIMARY KEY,"+
+    String tablaUsuarios = "CREATE TABLE IF NOT EXISTS 'clientes' (" +
+            "  'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
             "  'usuario' TEXT NOT NULL UNIQUE," +
             "  'direccion' TEXT NOT NULL,"+
-            "  'email' TEXT NOT NULL,"+
-            "  'contrasenya' TEXT NOT NULL,"+
+            "  'email' TEXT NOT NULL UNIQUE,"+
+            "  'contrasenya' TEXT NOT NULL"+
             "  );";
 
-    String createPedidos = "CREATE TABLE IF NOT EXISTS pedidos (" +
+    String createPedidos = "CREATE TABLE IF NOT EXISTS 'pedidos' (" +
             "  id INTEGER NOT NULL PRIMARY KEY," +
-            "  usuarioIdentificador TEXT NOT NULL," +
+            "  usuarioIdentificador INTEGER NOT NULL," +
             "  farmaco TEXT NOT NULL," +
             "  dosis TEXT NOT NULL," +
-            "  extra TEXT NOT NULL," +
+            "  forma TEXT NOT NULL," +
             "  unidades INTEGER NOT NULL," +
             "  precio INTEGER NOT NULL," +
             "  imagen INTEGER NOT NULL," +
@@ -34,17 +34,17 @@ public class BaseDeDatos extends SQLiteOpenHelper{
 
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(tablaUsuarios);
-        //db.execSQL(createPedidos);
+        db.execSQL(createPedidos);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //Eliminamos la version anterior de la tabla
         db.execSQL("DROP TABLE IF EXISTS 'clientes'");
-        //db.execSQL("DROP TABLE IF EXISTS pedidos");
+        db.execSQL("DROP TABLE IF EXISTS pedidos");
         //Creamos la nueva versi�n de la tabla
         db.execSQL(tablaUsuarios);
-        //db.execSQL(createPedidos);
+        db.execSQL(createPedidos);
     }
 }
 

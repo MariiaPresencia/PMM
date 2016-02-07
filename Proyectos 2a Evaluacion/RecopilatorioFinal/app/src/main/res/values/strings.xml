@@ -10,8 +10,10 @@
     <string name="copy">Copyrigth @2016 Maria Presencia</string>
     <string name="usuario">Usuario:</string>
     <string name="contraseña">Contraseña:</string>
-    <string name="entrar">Entrar</string>
+    <string name="eliminar">Eliminar</string>
     <string name="registro">Registrate</string>
     <string name="email">Correo:</string>
     <string name="direccion">Direccion:</string>
+    <string name="modificar">Modificar</string>
+    <string name="entrar">Entrar</string>
 </resources>
