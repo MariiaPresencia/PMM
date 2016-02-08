@@ -12,7 +12,6 @@ import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.MiCuenta
 public class Registro extends AppCompatActivity {
 
     EditText e1,e2,e3,e4;
-    String s,s1,s2,s3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +42,6 @@ public class Registro extends AppCompatActivity {
             }
         });
 
-        s = e1.getText().toString();
-        s1 = e2.getText().toString();
-        s2= e3.getText().toString();
-        s3 = e4.getText().toString();
-        Bundle envio =new Bundle();
-        envio.putString("usu",s);
-        envio.putString("dir",s1);
-        envio.putString("cor", s2);
-        envio.putString("con", s3);
-        Intent i = new Intent(Registro.this,MiCuenta.class);
-        startActivity(i);
     }
 
     //metodo para introducir los datos del EditText en la Tabla de la base de datos

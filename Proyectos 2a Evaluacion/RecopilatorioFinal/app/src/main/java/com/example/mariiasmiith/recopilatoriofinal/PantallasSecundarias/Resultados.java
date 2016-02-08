@@ -49,9 +49,9 @@ public class Resultados extends AppCompatActivity{
             public void onItemSelected(AdapterView arg0, View arg1, int i, long id) {
                 i1.setImageResource(listapedido[i].getImagen());
                 t3.setText(listapedido[i].getFarmaco());
-                t4.setText("" + listapedido[i].getPrecio());
+                t4.setText("Precio " + listapedido[i].getPrecio());
                 t5.setText(listapedido[i].getForma());
-                t6.setText("" + listapedido[i].getUnidad());
+                t6.setText("Unidad " + listapedido[i].getUnidad());
                 t7.setText(listapedido[i].getDosis());
 
             }
@@ -68,6 +68,7 @@ public class Resultados extends AppCompatActivity{
                 eliminarPedido();
             }
         });
+
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,6 +115,13 @@ public class Resultados extends AppCompatActivity{
                 t6.setText(""+listapedido[i].getUnidad());
                 t7.setText(listapedido[i].getDosis());
                 idPedido = i;
+
+            b1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    eliminarPedido();
+                }
+            });
             return item;
         }
     }
