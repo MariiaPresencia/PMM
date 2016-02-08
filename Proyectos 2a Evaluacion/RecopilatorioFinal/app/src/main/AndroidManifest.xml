@@ -15,14 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Resultados" />
+        <activity android:name=".PantallasSecundarias.Resultados" />
         <activity android:name=".Registro" />
         <activity android:name=".Clientes" />
+        <activity android:name=".PantallasSecundarias.MiCuenta"/>
         <activity android:name=".PantallasSecundarias.Pedir" />
         <activity android:name=".PantallasFinales.PantallaFinal" />
         <activity android:name=".PantallasSecundarias.DibujoApp"/>
         <activity android:name=".PantallasSecundarias.AcercaDe"/>
         <activity android:name=".MainClientes"/>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

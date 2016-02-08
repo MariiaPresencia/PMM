@@ -6,8 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 import android.content.*;
-import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.ModificacionUsuario;
+
+import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.MiCuenta;
 import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.Pedir;
+import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.Resultados;
 
 public class MainClientes extends AppCompatActivity {
     int id;
@@ -47,15 +49,25 @@ public class MainClientes extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainClientes.this,ModificacionUsuario.class);
+                Intent in = new Intent(MainClientes.this,MiCuenta.class);
+                Bundle envio1 = new Bundle();
+                envio1.putInt("IDC",id);
+                envio1.putString("Nombre",nombre);
+
                 startActivity(in);
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent inte = new Intent(MainClientes.this, Resultados.class);
+                Bundle envio1 = new Bundle();
+                envio1.putString("Nombre",nombre);
+                envio1.putInt("ID",id);
+                inte.putExtras(envio1);
+                startActivity(inte);
             }
+
         });
 
 

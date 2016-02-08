@@ -107,7 +107,7 @@ public class Pedir extends AppCompatActivity{
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                farmaco1 = "No ha seleccionado ningun ordenador";
+                farmaco1 = "No ha seleccionado ningun farmaco";
             }
         });
 

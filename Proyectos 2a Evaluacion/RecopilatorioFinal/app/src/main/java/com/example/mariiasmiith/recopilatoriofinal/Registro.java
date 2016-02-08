@@ -7,10 +7,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.content.*;
 import android.view.*;
 import android.app.*;
+import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.MiCuenta;
 
 public class Registro extends AppCompatActivity {
 
     EditText e1,e2,e3,e4;
+    String s,s1,s2,s3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,6 @@ public class Registro extends AppCompatActivity {
         e3 = (EditText) findViewById(R.id.correo1);
         e4 = (EditText) findViewById(R.id.contra1);
 
-        Bundle b = new Bundle();
         //al pulsar el boton llama al metodo insetar con los datos escritos
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,14 +33,29 @@ public class Registro extends AppCompatActivity {
                 String cor = e3.getText().toString();
                 String con = e4.getText().toString();
 
+
+
+
                 insertarUsuario(usu, dir, cor, con);
+
+                Intent in = new Intent(Registro.this,MainActivity.class);
+                startActivity(in);
             }
         });
+
+        s = e1.getText().toString();
+        s1 = e2.getText().toString();
+        s2= e3.getText().toString();
+        s3 = e4.getText().toString();
+        Bundle envio =new Bundle();
+        envio.putString("usu",s);
+        envio.putString("dir",s1);
+        envio.putString("cor", s2);
+        envio.putString("con", s3);
+        Intent i = new Intent(Registro.this,MiCuenta.class);
+        startActivity(i);
     }
 
-    public void validarUsuario(){
-
-    }
     //metodo para introducir los datos del EditText en la Tabla de la base de datos
     public void insertarUsuario(String usuario, String direccion, String email, String contrasenya) {
 
@@ -58,10 +74,8 @@ public class Registro extends AppCompatActivity {
 
         db.close();
 
-        e1.setText("");
-        e2.setText("");
-        e3.setText("");
-        e4.setText("");
+
+
 
         Toast.makeText(this, "Creado correctamente", Toast.LENGTH_SHORT).show();
 

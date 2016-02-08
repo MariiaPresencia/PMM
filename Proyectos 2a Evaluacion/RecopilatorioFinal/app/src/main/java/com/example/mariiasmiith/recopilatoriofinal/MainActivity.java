@@ -9,9 +9,10 @@ import android.view.*;
 
 import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.AcercaDe;
 import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.DibujoApp;
+import com.example.mariiasmiith.recopilatoriofinal.PantallasSecundarias.Resultados;
 
 public class MainActivity extends AppCompatActivity {
-    public Button b1,b2,b4;
+    public Button b1,b2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         b1 = (Button)findViewById(R.id.button);
         b2 = (Button)findViewById(R.id.button1);
-        b4 = (Button)findViewById(R.id.button3);
+
 
         b1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -33,13 +34,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent inte = new Intent(MainActivity.this,Registro.class);
                 startActivity(inte);
-            }
-        });
-
-        b4.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent inten = new Intent(MainActivity.this,Resultados.class);
-                startActivity(inten);
             }
         });
 

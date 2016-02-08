@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RecopilatorioFinal</string>
     <string name="titulo">Farmacia</string>
-    <string name="primerBoton">Usuario</string>
+    <string name="primerBoton">Cliente</string>
     <string name="segundoBoton">Registrar</string>
     <string name="tercerBoton">Mi carrito</string>
     <string name="cuartoBoton">Pedidos</string>
@@ -16,4 +16,8 @@
     <string name="direccion">Direccion:</string>
     <string name="modificar">Mi cuenta</string>
     <string name="entrar">Entrar</string>
+    <string name="boton1">Visualizar</string>
+    <string name="boton2">Modificar</string>
+    <string name="boton3">Borrar</string>
+    <string name="boton4">Actualizar</string>
 </resources>

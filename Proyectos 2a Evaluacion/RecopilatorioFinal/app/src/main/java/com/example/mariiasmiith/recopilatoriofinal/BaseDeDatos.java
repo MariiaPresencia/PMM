@@ -22,7 +22,7 @@ public class BaseDeDatos extends SQLiteOpenHelper{
             "  'forma' TEXT NOT NULL," +
             "  'unidad' REAL NOT NULL," +
             "  'precio' REAL NOT NULL," +
-            "  'imagen' INTEGER NOT NULL," +
+            "  'imagen' INTEGERf NOT NULL," +
             "   FOREIGN KEY(idCliente) REFERENCES clientes(id) ON DELETE CASCADE" +
             "  );";
 

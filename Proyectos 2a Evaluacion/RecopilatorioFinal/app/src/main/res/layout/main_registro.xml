@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="vertical" android:layout_width="match_parent"
-android:layout_height="wrap_content">
+android:layout_height="match_parent"
+    android:background="#61e255">
 
 <TextView
     android:layout_width="match_parent"
@@ -9,25 +10,19 @@ android:layout_height="wrap_content">
     android:text="@string/registro"
     android:textAlignment="center"
     android:id="@+id/text1"
-    android:textColor="#036513"
+    android:textColor="#19409a"
     android:textSize="30dp"
     android:gravity="center_vertical|center"
     android:layout_weight="0.10"
-    android:typeface="normal"
-    android:visibility="visible"
-    android:textStyle="bold" />
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:typeface="serif"
+    android:textStyle="bold|italic" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/usuario"
         android:id="@+id/usuario"
-        android:textColor="#036513"
+        android:textColor="#19409a"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp" />
@@ -38,14 +33,14 @@ android:layout_height="wrap_content">
         android:id="@+id/usua1"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:textColor="#036513" />
+        android:textColor="#19409a" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/direccion"
         android:id="@+id/dir"
-        android:textColor="#036513"
+        android:textColor="#19409a"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp" />
@@ -58,14 +53,14 @@ android:layout_height="wrap_content">
         android:id="@+id/dir1"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:textColor="#036513" />
+        android:textColor="#19409a" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
         android:id="@+id/correo"
-        android:textColor="#036513"
+        android:textColor="#19409a"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp" />
@@ -76,44 +71,29 @@ android:layout_height="wrap_content">
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/correo1"
-        android:textColor="#036513"
+        android:textColor="#19409a"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contraseña"
+        android:id="@+id/contra"
+        android:textColor="#19409a"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/contraseña"
-            android:id="@+id/contra"
-            android:textColor="#036513"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/contra1"
+        android:textColor="#19409a"/>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:id="@+id/contra1"
-            android:textColor="#036513"/>
-
-
-    </LinearLayout>
-</LinearLayout>
-
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <Button
         android:layout_width="wrap_content"
@@ -122,8 +102,8 @@ android:layout_height="wrap_content">
         android:id="@+id/button4"
         android:gravity="center_vertical|center"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp" />
-</LinearLayout>
-
+        android:layout_marginTop="20dp"
+        android:textColor="#1c2d9d"
+        android:typeface="serif" />
 
 </LinearLayout>

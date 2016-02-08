@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#61e255">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -9,26 +11,21 @@
         android:textAlignment="center"
         android:id="@+id/texto2"
         android:textStyle="bold|italic"
-        android:textColor="#036513"
+        android:textColor="#19409a"
         android:textSize="40dp"
-        android:gravity="center_vertical|center"
-        android:layout_weight="0.10" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="40dp">
+        android:gravity="center"
+        android:typeface="serif" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/usuario"
             android:id="@+id/usuario"
-            android:textColor="#036513"
+            android:textColor="#19409a"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:typeface="serif" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -36,50 +33,39 @@
             android:id="@+id/usua1"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:textColor="#036513"/>
+            android:textColor="#19409a"/>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contraseña"
-                android:id="@+id/cintra"
-                android:textColor="#036513"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contraseña"
+            android:id="@+id/cintra"
+            android:textColor="#19409a"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:typeface="serif" />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/contra1"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:textColor="#036513"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:gravity="center_vertical|center">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contra1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:textColor="#19409a"
+            android:typeface="serif" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/entrar"
             android:id="@+id/button4"
-            android:layout_marginTop="20dp" />
-
-    </LinearLayout>
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#19409a"
+            android:typeface="serif" />
 
 </LinearLayout>

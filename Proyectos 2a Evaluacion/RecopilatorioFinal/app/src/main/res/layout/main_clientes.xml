@@ -9,17 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mariiasmiith.recopilatoriofinal.MainActivity"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#61e255">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tit"
-        android:textColor="#036513"
-        android:textStyle="bold"
+        android:textColor="#0c2dbc"
+        android:textStyle="bold|italic"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"
-        />
+        android:textSize="30dp"
+        android:typeface="serif" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -30,7 +31,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonMod"
         android:text="@string/modificar"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#0c2dbc"
+        android:typeface="serif" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -43,7 +46,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:text="@string/tercerBoton"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#0c2dbc"
+            android:typeface="serif" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -56,6 +61,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonListar"
             android:text="@string/cuartoBoton"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#0c2dbc"
+            android:typeface="serif" />
     </LinearLayout>
 </LinearLayout>
