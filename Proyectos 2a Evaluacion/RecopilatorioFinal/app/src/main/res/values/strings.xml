@@ -14,10 +14,13 @@
     <string name="registro">Registrate</string>
     <string name="email">Correo:</string>
     <string name="direccion">Direccion:</string>
-    <string name="modificar">Mi cuenta</string>
+    <string name="modificar">Modificar</string>
     <string name="entrar">Entrar</string>
     <string name="boton1">Visualizar</string>
     <string name="boton2">Modificar</string>
     <string name="boton3">Borrar</string>
     <string name="boton4">Actualizar</string>
+    <string name="cerrar">Cerrar sesion</string>
+    <string name="miCuenta">Mi cuenta</string>
+    <string name="atras">Atras</string>
 </resources>

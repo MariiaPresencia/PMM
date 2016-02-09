@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#61e255">
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tit"
-            android:textColor="#036513"
+            android:textColor="#19409a"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
@@ -41,12 +42,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/boton3"
-            android:id="@+id/button7" />
+            android:id="@+id/button7"
+            android:textColor="#19409a"
+            android:typeface="serif"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/boton4"
-            android:id="@+id/button8" />
+            android:id="@+id/button8"
+            android:textColor="#19409a"
+            android:typeface="serif"
+            android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>

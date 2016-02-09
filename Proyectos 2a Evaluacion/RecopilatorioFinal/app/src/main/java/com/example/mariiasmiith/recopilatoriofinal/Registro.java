@@ -32,9 +32,6 @@ public class Registro extends AppCompatActivity {
                 String cor = e3.getText().toString();
                 String con = e4.getText().toString();
 
-
-
-
                 insertarUsuario(usu, dir, cor, con);
 
                 Intent in = new Intent(Registro.this,MainActivity.class);

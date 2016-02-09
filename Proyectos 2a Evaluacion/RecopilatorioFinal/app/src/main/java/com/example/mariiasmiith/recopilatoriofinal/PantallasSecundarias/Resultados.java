@@ -128,7 +128,7 @@ public class Resultados extends AppCompatActivity{
 
     public void eliminarPedido(){
         final SQLiteDatabase b = bd.getReadableDatabase();
-        b.execSQL("DELETE FROM pedidos WHERE id = " + listapedido[idPedido].getIdPedido());
+        b.execSQL("DELETE FROM pedidos WHERE id = " + idPedido);
         Toast.makeText(this,"Pedido borrado correctamente",Toast.LENGTH_SHORT).show();
     }
     public void mostrar(){

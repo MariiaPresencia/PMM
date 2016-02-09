@@ -1,8 +1,6 @@
 package com.example.mariiasmiith.recopilatoriofinal.Clases;
 
-/**
- * Created by MariiaSmiith on 5/2/16.
- */
+
 public class Usuarios1 {
     private String usuario, contraseña;
     private int id;

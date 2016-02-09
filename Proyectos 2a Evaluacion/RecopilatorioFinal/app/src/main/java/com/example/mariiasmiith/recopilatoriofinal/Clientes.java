@@ -63,7 +63,7 @@ public class Clientes extends AppCompatActivity{
             startActivity(i);
         }
         else{
-            Toast.makeText(this, "BIEN", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Existe", Toast.LENGTH_SHORT).show();
             Bundle mibundle = new Bundle();
             mibundle.putInt("ID", id);
             mibundle.putString("CLIENTE", cliente3);

@@ -214,7 +214,6 @@ public class Pedir extends AppCompatActivity{
 
 
         db.insert("pedidos", null, registro1);
-        //db.execSQL("INSERT INTO 'pedidos' (idCliente , farmaco , dosis, forma , unidades , precio, imagen) VALUES " + registro);
         db.close();
 
         Toast.makeText(this, "Guardado correctamente", Toast.LENGTH_SHORT).show();

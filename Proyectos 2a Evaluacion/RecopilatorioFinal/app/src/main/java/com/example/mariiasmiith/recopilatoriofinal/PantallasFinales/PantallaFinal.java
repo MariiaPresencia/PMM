@@ -2,11 +2,18 @@ package com.example.mariiasmiith.recopilatoriofinal.PantallasFinales;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.*;
+
+import com.example.mariiasmiith.recopilatoriofinal.MainClientes;
 import com.example.mariiasmiith.recopilatoriofinal.R;
 
 public class PantallaFinal extends AppCompatActivity {
+    Button b1;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantallafinal);
@@ -19,6 +26,7 @@ public class PantallaFinal extends AppCompatActivity {
         final TextView otroSaludo5= (TextView)findViewById(R.id.miMensaje5);
         final ImageView imagen = (ImageView)findViewById(R.id.imageView2);
 
+
         Bundle  miBundleRecoger = getIntent().getExtras();
         otroSaludo1.setText(miBundleRecoger.getString("FARMACO"));
         otroSaludo2.setText(miBundleRecoger.getString("PRECIO"));
@@ -27,7 +35,6 @@ public class PantallaFinal extends AppCompatActivity {
         otroSaludo5.setText(miBundleRecoger.getString("SELECCION"));
         otroSaludo.setText(miBundleRecoger.getString("TEXTO"));
         imagen.setBackgroundDrawable(getResources().getDrawable(miBundleRecoger.getInt("IMAGEN")));
-
 
 
     }

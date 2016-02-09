@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonMod"
-        android:text="@string/modificar"
+        android:text="@string/miCuenta"
         android:layout_gravity="center_horizontal"
         android:textColor="#0c2dbc"
         android:typeface="serif" />
@@ -61,6 +61,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonListar"
             android:text="@string/cuartoBoton"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#0c2dbc"
+            android:typeface="serif" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCerrar"
+            android:text="@string/cerrar"
             android:layout_gravity="center_horizontal"
             android:textColor="#0c2dbc"
             android:typeface="serif" />
