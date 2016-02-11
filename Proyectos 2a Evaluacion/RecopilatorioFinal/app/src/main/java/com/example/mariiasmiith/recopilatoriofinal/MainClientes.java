@@ -63,8 +63,8 @@ public class MainClientes extends AppCompatActivity {
             public void onClick(View v) {
                 Intent inte = new Intent(MainClientes.this, Resultados.class);
                 Bundle envio1 = new Bundle();
-                envio1.putString("Nombre",nombre);
-                envio1.putInt("ID",id);
+                envio1.putString("NOMBRE",nombre);
+                envio1.putInt("IDC",id);
                 inte.putExtras(envio1);
                 startActivity(inte);
             }

@@ -1,6 +1,5 @@
 package com.example.mariiasmiith.probandodibujar;
 
-import android.hardware.camera2.params.MeteringRectangle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

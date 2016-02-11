@@ -18,7 +18,8 @@ public class MiCuenta extends AppCompatActivity {
     int id;
     EditText t1 , t2 , t3 ,t4;
     String usur , dir , con, cor;
-    Button b1 , b2;
+    Button b1 ;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_micuenta);
@@ -26,7 +27,6 @@ public class MiCuenta extends AppCompatActivity {
         id = coger.getInt("IDC");
 
         b1 = (Button) findViewById(R.id.button4);
-        b2 = (Button)findViewById(R.id.button11);
         t1 = (EditText)findViewById(R.id.usua1);
         t2 = (EditText)findViewById(R.id.dir1);
         t3 = (EditText)findViewById(R.id.correo1);
@@ -55,13 +55,7 @@ public class MiCuenta extends AppCompatActivity {
                 modificarUsuario(usur,dir,cor,con);
             }
         });
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MiCuenta.this, MainClientes.class);
-                startActivity(i);
-            }
-        });
+
     }
     BaseDeDatos bd = new BaseDeDatos(this, "DBUsuarios", null, 1);
 

@@ -7,6 +7,8 @@ import android.widget.*;
 import com.example.mariiasmiith.recopilatoriofinal.*;
 import com.example.mariiasmiith.recopilatoriofinal.BaseDeDatos;
 import com.example.mariiasmiith.recopilatoriofinal.Clases.PedidosCompleto;
+import com.example.mariiasmiith.recopilatoriofinal.Clases.UsuariosCompleto;
+
 import android.app.*;
 import android.view.*;
 import android.database.sqlite.SQLiteDatabase;
@@ -22,15 +24,17 @@ public class Resultados extends AppCompatActivity{
     ImageView i1;
     int id;
     String farmaco;
+    PedidosCompleto[] listapedido;
 
+    int idPedido;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_clientespedidos);
 
         Bundle recogido = getIntent().getExtras();
-        id = recogido.getInt("ID");
-        idN = recogido.getString("Nombre");
+        id = recogido.getInt("IDC");
+        idN = recogido.getString("NOMBRE");
         titulo = "Tus pedidos " + idN + " son:";
         t1 = (TextView) findViewById(R.id.tit);
         t1.setText(titulo);
@@ -43,24 +47,25 @@ public class Resultados extends AppCompatActivity{
         list = (Spinner) findViewById(R.id.list);
         list.setAdapter(adaptador);
 
-        Adaptador adaptado = new Adaptador(this);
+        final Adaptador adaptado = new Adaptador(this);
         list.setAdapter(adaptado);
         list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView arg0, View arg1, int i, long id) {
                 i1.setImageResource(listapedido[i].getImagen());
                 t3.setText(listapedido[i].getFarmaco());
-                t4.setText("Precio " + listapedido[i].getPrecio());
+                t4.setText("" + listapedido[i].getPrecio());
                 t5.setText(listapedido[i].getForma());
-                t6.setText("Unidad " + listapedido[i].getUnidad());
+                t6.setText("" + listapedido[i].getUnidad());
                 t7.setText(listapedido[i].getDosis());
-
+                idPedido = listapedido[i].getIdPedido();
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 farmaco = "No ha seleccionado ningun farmaco";
             }
+
         });
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,9 +77,10 @@ public class Resultados extends AppCompatActivity{
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pagina = new Intent(getApplicationContext(), Resultados.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                Intent pagina = new Intent(getApplicationContext(),Resultados.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 Bundle b= new Bundle();
-                b.putInt("ID",id);
+                b.putInt("IDC",id);
+                b.putString("NOMBRE", idN);
                 pagina.putExtras(b);
                 startActivity(pagina);
             }
@@ -82,10 +88,7 @@ public class Resultados extends AppCompatActivity{
 
     }
 
-    BaseDeDatos bd = new BaseDeDatos(this, "DBUsuarios", null, 1);
-    PedidosCompleto[] listapedido;
-    int idPedido;
-
+    //creamos una clase Adaptador para mostrar los pedidos del cliente en el spinner
     class Adaptador extends ArrayAdapter<PedidosCompleto>{
         public Activity context;
         public Adaptador(Activity context) {
@@ -98,39 +101,37 @@ public class Resultados extends AppCompatActivity{
         }
 
         public View getView(int i, View convertView, ViewGroup parent) {
-            View item = convertView;
-                LayoutInflater inflater = getLayoutInflater();
-                item = inflater.inflate(R.layout.spinner_pedidos, null);
-                i1 = (ImageView) item.findViewById(R.id.img);
-                t3 = (TextView) item.findViewById(R.id.Farmaco);
-                t4 = (TextView) item.findViewById(R.id.precio);
-                t5 = (TextView) item.findViewById(R.id.forma);
-                t6 = (TextView) item.findViewById(R.id.uni);
-                t7 = (TextView) item.findViewById(R.id.dosis);
+            LayoutInflater inflater = getLayoutInflater();
+            View item = inflater.inflate(R.layout.spinner_pedidos, null);
+            //guardamos en las variables
+            i1 = (ImageView) item.findViewById(R.id.img);
+            t3 = (TextView) item.findViewById(R.id.Farmaco);
+            t4 = (TextView) item.findViewById(R.id.precio);
+            t5 = (TextView) item.findViewById(R.id.forma);
+            t6 = (TextView) item.findViewById(R.id.uni);
+            t7 = (TextView) item.findViewById(R.id.dosis);
+            //mostramos los datos de la tabla
+            i1.setImageResource(listapedido[i].getImagen());
+            t3.setText(listapedido[i].getFarmaco());
+            t4.setText("Precio :" + listapedido[i].getPrecio());
+            t5.setText(listapedido[i].getForma());
+            t6.setText("Unidades :"+listapedido[i].getUnidad());
+            t7.setText(listapedido[i].getDosis());
 
-                i1.setImageResource(listapedido[i].getImagen());
-                t3.setText(listapedido[i].getFarmaco());
-                t4.setText("" + listapedido[i].getPrecio());
-                t5.setText(listapedido[i].getForma());
-                t6.setText(""+listapedido[i].getUnidad());
-                t7.setText(listapedido[i].getDosis());
-                idPedido = i;
-
-            b1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    eliminarPedido();
-                }
-            });
             return item;
         }
     }
 
+
     public void eliminarPedido(){
-        final SQLiteDatabase b = bd.getReadableDatabase();
-        b.execSQL("DELETE FROM pedidos WHERE id = " + idPedido);
-        Toast.makeText(this,"Pedido borrado correctamente",Toast.LENGTH_SHORT).show();
+        BaseDeDatos bd1 = new BaseDeDatos(this,"DBUsuarios",null,1);
+        SQLiteDatabase b = bd1.getWritableDatabase();
+        String[] arg = new String[]{String.valueOf(idPedido)};
+        b.delete("pedidos","id=?",arg);
+        //b.execSQL("DELETE FROM pedidos WHERE id = " + idPedido);
+        Toast.makeText(this,"Pedido borrado correctamente:"+arg[0],Toast.LENGTH_SHORT).show();
     }
+    //recogemos todos los datos de la tabla con el id del Cliente con el que logueamos
     public void mostrar(){
             BaseDeDatos b = new BaseDeDatos(this, "DBUsuarios", null, 1);
             SQLiteDatabase bd = b.getReadableDatabase();

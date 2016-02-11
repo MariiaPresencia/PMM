@@ -11,6 +11,7 @@ public class PedidosCompleto {
 
 
     public PedidosCompleto(int idPedido,int idCliente, String farmaco,String dosis, String forma, int unidad,double precio, int imagen){
+        this.idPedido = idPedido;
         this.idCliente = idCliente;
         this.farmaco = farmaco;
         this.dosis = dosis;
@@ -19,7 +20,9 @@ public class PedidosCompleto {
         this.precio = precio;
         this.imagen = imagen;
     }
-
+    public PedidosCompleto(int id){
+        this.idPedido = id;
+    }
     public int getIdPedido() {
         return idPedido;
     }
