@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FigurasAleatorias</string>
+    <string name="primerBoton">Crear figuras (tocando pantalla)</string>
+    <string name="segundoBoton">Random</string>
+</resources>

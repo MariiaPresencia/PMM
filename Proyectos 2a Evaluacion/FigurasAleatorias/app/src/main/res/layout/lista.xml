@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300px"
+    android:layout_height="300px"
+    android:orientation="vertical"
+    >
+
+    <TextView android:id="@+id/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20px"
+        android:text="Figura"
+        android:layout_gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:id="@+id/imagenfig"
+        android:foregroundGravity="left"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp" />
+</LinearLayout>
