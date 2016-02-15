@@ -19,8 +19,8 @@
         android:textStyle="bold|italic"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:textSize="30dp"
-        android:typeface="serif" />
+        android:textSize="25dp"
+        android:typeface="serif"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
