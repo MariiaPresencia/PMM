@@ -5,15 +5,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.*;
 import android.content.*;
 import android.graphics.*;
+import com.example.mariiasmiith.recopilatoriofinal.*;
 
 
 
 public class DibujoApp extends AppCompatActivity{
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new MiDibujo(this));
+    }
+
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu,v,menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menudibujo, menu);
+    }
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.option1:
+                Intent info = new Intent(this, Informacion.class);
+                startActivity(info);
+                return true;
+            default:
+                return true;
+        }
     }
 
     class MiDibujo extends View{
@@ -74,4 +90,5 @@ public class DibujoApp extends AppCompatActivity{
             p.drawText("Farmacia Presencia", 125, 900, miPincel);
         }
     }
+
 }
