@@ -37,7 +37,7 @@ public class MiCuenta extends AppCompatActivity {
         for(UsuariosCompleto usu1 : usu){
             usur = usu1.getNombre();
             dir =  usu1.getDireccion();
-            cor = usu1.getContraseña();
+            cor = usu1.getCorreo();
             con = usu1.getContraseña();
         }
         t1.setText(usur);

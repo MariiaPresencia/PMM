@@ -43,9 +43,9 @@ public class Resultados extends AppCompatActivity{
         b2 = (Button)findViewById(R.id.button8);
 
         mostrar();
-        Adaptador adaptador = new Adaptador(this);
+        //Adaptador adaptador = new Adaptador(this);
         list = (Spinner) findViewById(R.id.list);
-        list.setAdapter(adaptador);
+        //list.setAdapter(adaptador);
 
         final Adaptador adaptado = new Adaptador(this);
         list.setAdapter(adaptado);
